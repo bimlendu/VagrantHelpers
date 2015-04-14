@@ -22,22 +22,8 @@ skipx
 shutdown
 %packages
 @core
-openssh-server
-openssh-clients
-wget
-curl
-git
-man
-vim
-ntp
 %end
-
 %post
-chkconfig ntpd on
-service ntpd stop
-ntpdate time.nist.gov
-service ntpd start
-chkconfig sshd on
 chkconfig iptables off
 chkconfig ip6tables off
 useradd vagrant
